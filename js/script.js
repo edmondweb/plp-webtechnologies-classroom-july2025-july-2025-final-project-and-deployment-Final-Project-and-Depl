@@ -57,3 +57,40 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+function animateCounter(el, target, suffix = '', duration = 2000) {
+    let start = 0;
+    const increment = target / (duration / 16); // approx 60fps
+    const update = () => {
+        start += increment;
+        if (start < target) {
+            el.textContent = Math.floor(start).toLocaleString() + suffix;
+            requestAnimationFrame(update);
+        } else {
+            el.textContent = target.toLocaleString() + suffix;
+        }
+    };
+    update();
+}
+
+function startCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const suffix = counter.getAttribute('data-suffix') || '';
+        animateCounter(counter, target, suffix);
+    });
+}
+
+// Optional: Animate only when in view
+const section = document.querySelector('.section');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            startCounters();
+            observer.disconnect(); // Run once
+        }
+    });
+}, { threshold: 0.4 });
+
+observer.observe(section);
