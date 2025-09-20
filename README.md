@@ -1,18 +1,14 @@
 🐾 Kerniel Foundation Website
 =============================
 
-A **multi-page responsive website** for the **Kerniel Foundation**, a nonprofit organization dedicated to rescuing, rehabilitating, and rehoming abandoned dogs while promoting responsible pet ownership. The project showcases planning, semantic HTML5 structure, responsive CSS, and JavaScript interactivity.
-
-* * *
+A **multi-page responsive website** for the **Kerniel Foundation**, a nonprofit organization dedicated to rescuing, rehabilitating, and rehoming abandoned dogs while promoting responsible pet ownership. The project showcases planning, semantic HTML5 structure, responsive CSS, and JavaScript interactivity. 
 
 🌐 Purpose
 ----------
 
 The goal of this website is to raise awareness of the Kerniel Foundation’s mission, highlight its rescue and adoption programs, and provide clear ways for the community to get involved through volunteering, fostering, or donating.
 
-It demonstrates how to structure and deploy a professional nonprofit website with multiple sections, consistent navigation, and engaging user experiences.
-
-* * *
+It demonstrates how to structure and deploy a professional nonprofit website with multiple sections, consistent navigation, and engaging user experiences. 
 
 📑 Site Structure
 -----------------
@@ -37,9 +33,7 @@ The website is organized into **five main pages**, each represented as a section
 
 5. **Contact Us**
    
-   * Contact information, interactive form, location details, and newsletter signup.
-
-* * *
+   * Contact information, interactive form, location details, and newsletter signup. 
 
 🛠️ Technologies Used
 ---------------------
@@ -53,8 +47,6 @@ The website is organized into **five main pages**, each represented as a section
 * **Font Awesome** → Icons for navigation and UI elements
 
 * **Google Fonts** → Typography (Inter, Space Grotesk)
-
-* * *
 
 📂 File Organization
 --------------------
@@ -70,10 +62,8 @@ Kerniel-Foundation/
 ├── Images/│
        ├── icon.PNG      # Favicon
 │      └── loggo.png     # Logo 
-└── README.md         # Project documentation
+└── README.md         # Project documentation 
 ```
-
-* * *
 
 📱 Features & Interactivity
 ---------------------------
@@ -86,9 +76,7 @@ Kerniel-Foundation/
 
 * **Interactive Forms** → Contact form and newsletter subscription
 
-* **Engagement Sections** → Success stories, programs, volunteer/donate/foster options
-
-* * *
+* **Engagement Sections** → Success stories, programs, volunteer/donate/foster options. 
 
 🚀 Deployment
 -------------
@@ -116,9 +104,7 @@ This project can be deployed using:
 
 * Validated HTML/CSS
 
-* Cross-browser and device testing
-
-* * *
+* Cross-browser and device testing 
 
 📌 Outcome
 ----------
