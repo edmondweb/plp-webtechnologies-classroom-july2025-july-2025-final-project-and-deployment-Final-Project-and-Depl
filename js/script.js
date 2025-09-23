@@ -76,6 +76,49 @@ menuToggle.addEventListener('click', () => {
     nav.style.display = nav.style.display === 'none' ? 'flex' : 'none'; // Toggle the menu's visibility
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll('.section');
+    const cards = document.querySelectorAll('.card');
+
+    // Observer options
+    const options = {
+        root: null, // Use the viewport as the root
+        rootMargin: '0px',
+        threshold: 0.5 // Trigger when 50% of the section is in view
+    };
+
+    // Create the Intersection Observer for sections
+    const sectionObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    // Create the Intersection Observer for cards
+    const cardObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    // Observe all sections and cards
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+
+    cards.forEach(card => {
+        cardObserver.observe(card);
+    });
+});
+
+// Animated Counters
+
 function animateCounter(el, target, suffix = '', duration = 2000) {
     let start = 0;
     const increment = target / (duration / 16); // approx 60fps
