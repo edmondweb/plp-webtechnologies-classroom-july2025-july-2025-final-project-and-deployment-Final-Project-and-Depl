@@ -58,6 +58,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Menu toggle functionality
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+
+// Hide the navigation menu by default on page load
+window.addEventListener('load', () => {
+    if (window.innerWidth <= 768) {
+        nav.style.display = 'none'; // Hide the menu on page load
+    }
+});
+
+// When the menu toggle is clicked
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('open'); // Toggle the icon
+    nav.classList.toggle('open'); // Toggle the menu visibility
+    nav.style.display = nav.style.display === 'none' ? 'flex' : 'none'; // Toggle the menu's visibility
+});
+
 function animateCounter(el, target, suffix = '', duration = 2000) {
     let start = 0;
     const increment = target / (duration / 16); // approx 60fps

@@ -39,6 +39,10 @@
                         </div>
                     </a>
                 </div>
+                <!-- Mobile menu toggle -->
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
                 <nav>
                     <ul>
                         <li><a href="#" onclick="showPage('home')" class="nav-link active">Home</a></li>
@@ -642,9 +646,11 @@
                         <h2>Visit Our Location</h2>
                         <div
                             style="background: #f0f0f0; padding: 2rem; border-radius: 15px; text-align: center; margin-bottom: 2rem;">
-                            <div style="font-size: 4rem; margin-bottom: 1rem;"><i class="fa-solid fa-map"></i></div>
-                            <h3>Interactive Map</h3>
-                            <p>Find us easily using GPS coordinates or your favorite maps application.</p>
+                            <div style="font-size: 2rem; margin-bottom: 1rem;"><i class="fa-solid fa-map"></i></div>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0194567890123!2d-122.41941548468123!3d37.77492977975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b6c8e7b%3A0x4a4e4e4e4e4e4e4e!2s123%20Rescue%20Road%2C%20Compassion%20City%2C%20CC%2012345!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+                                width="100%" height="250" style="border:0; border-radius: 10px;" allowfullscreen=""
+                                loading="lazy"></iframe>
                             <p style="font-weight: bold; margin-top: 1rem;">123 Rescue Road, Compassion City, CC 12345
                             </p>
                         </div>
@@ -652,16 +658,18 @@
                 </div>
             </div>
         </section>
-        <div class="container" style="margin: 2rem auto; max-width: 600px; text-align: center;">
-            <h3>Newsletter Signup</h3>
-            <form onsubmit="subscribeNewsletter(event)" style="margin-top: 1rem;">
-                <div class="form-group">
-                    <input type="email" id="newsletter-email" name="newsletter-email"
-                        placeholder="Enter your email for updates" required>
-                </div>
-                <button type="submit" class="btn btn-secondary">Subscribe to Newsletter</button>
-            </form>
-        </div>
+        <section class="section">
+            <div class="container" style="margin: 2rem auto; max-width: 600px; text-align: center;">
+                <h3>Newsletter Signup</h3>
+                <form onsubmit="subscribeNewsletter(event)" style="margin-top: 1rem;">
+                    <div class="form-group">
+                        <input type="email" id="newsletter-email" name="newsletter-email"
+                            placeholder="Enter your email for updates" required>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Subscribe to Newsletter</button>
+                </form>
+            </div>
+        </section>
     </div>
 
     <!-- Footer -->

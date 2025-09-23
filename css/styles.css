@@ -42,10 +42,17 @@
      flex-wrap: wrap;
  }
 
+ .menu-toggle {
+     display: none;
+     cursor: pointer;
+ }
+
  .logo {
      display: flex;
      align-items: center;
      gap: 10px;
+     flex: 1;
+     flex: 1;
  }
 
  .logo-icon {
@@ -58,9 +65,9 @@
      font-size: 24px;
  }
 
- .logo h1 {
-     font-size: 1.8rem;
-     font-weight: bold;
+ nav {
+     display: flex;
+     justify-content: flex-end;
  }
 
  nav ul {
@@ -363,15 +370,52 @@
          gap: 1rem;
      }
 
+     header .container {
+         flex-direction: column;
+         align-items: flex-start;
+     }
+
      .logo {
          justify-content: left;
          margin-bottom: 1rem;
      }
 
-     nav ul {
-         gap: 1rem;
+     .logo-icon {
+         width: 40px;
+         height: 40px;
+         font-size: 20px;
+         align-items: flex-start;
+         border-radius: 50%;
+         display: flex;
+         justify-content: center;
+     }
+
+     nav {
+         display: none;
+         flex-direction: column;
+         align-items: flex-start;
+         margin-top: 1rem;
+     }
+
+     .logo img {
+         width: 120px;
+         height: 120px;
+     }
+
+     .menu-toggle {
+         display: block;
+         cursor: pointer;
+         margin-left: auto;
+         color: var(--light-color);
+         font-size: 2rem;
+     }
+
+     .menu-toggle.open+nav {
+         display: flex;
          display: flex;
          flex-direction: column;
+         align-items: flex-start;
+         margin-top: 0.5rem;
      }
 
      .hero h2 {
@@ -392,6 +436,28 @@
          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
          gap: 1rem;
          margin-top: 1rem;
+     }
+ }
+
+ /* Tablet styles (768px to 1024px) */
+ @media (min-width: 768px) and (max-width: 1024px) {
+     header .container {
+         flex-direction: column;
+     }
+
+     nav ul {
+         flex-direction: row;
+         justify-content: center;
+         margin-top: 1rem;
+     }
+
+     nav ul li {
+         margin-left: 1.2rem;
+     }
+
+     .logo img {
+         width: 140px;
+         height: 140px;
      }
  }
 
