@@ -412,10 +412,13 @@
 
      .menu-toggle.open+nav {
          display: flex;
-         display: flex;
          flex-direction: column;
          align-items: flex-start;
          margin-top: 0.5rem;
+         gap: 1rem;
+         flex-wrap: wrap;
+         margin-left: auto;
+         margin-right: auto;
      }
 
      .hero h2 {
